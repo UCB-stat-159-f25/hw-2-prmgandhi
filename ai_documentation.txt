@@ -1,0 +1,27 @@
+For this assignment I did not use any explicit AI/LLM agents or tools. Instead I used Google search to guide me when I had some questions. In some cases the Google AI Overview automatically presented itself at the top of the search results for my question. I tried to record all instances where I used the Google AI results below:
+
+Search: "should the environment.yml file include the env name in the file name"
+Result: "No, the environment.yml file itself does not need to include the environment name in its filename. By convention, the file is typically named environment.yml regardless of the environment it defines.
+The environment's name is specified within the environment.yml file using the name key, as in:
+name: my_env_name
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pandas
+When creating the environment using conda env create -f environment.yml, Conda reads this name key from the file to determine the environment's name"
+
+SearcH: "should I use the python version from the binder environment.yml of the notebook metadata?"
+Result: "It is highly recommended to use the Python version specified in the environment.yml file when working with a Binder environment. This file defines the exact dependencies and versions required for the project, ensuring a consistent and reproducible environment."
+
+Search: "do i need to include codespell for reproduction"
+Result: "Generally, you do not need to include codespell for reproduction, as it is a development tool used for code quality rather than a runtime dependency of your application. Its purpose is to find and fix common spelling mistakes in source code, documentation, and commit messages."
+
+Search: "how to delete a conda environment"
+Result: "To delete a Conda environment, follow these steps:
+Deactivate the environment (if active): If the environment you wish to delete is currently active, you must deactivate it first.
+    conda deactivate
+Remove the environment: Use the conda env remove command, specifying the environment's name. The --all flag ensures that all packages within the environment are also removed.
+    conda env remove --name <environment_name> --all
+Replace <environment_name> with the actual name of the environment you want to delete.
+Confirm removal: Conda will prompt you to confirm the removal of the environment and its associated packages. Type y or yes and press Enter to proceed."
